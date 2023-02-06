@@ -29,7 +29,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
               <Link className="d-flex" href="/">
                 {/* <img alt="Ecom" src="assets/imgs/template/logo-2.svg" /> */}
                 {/* <p>G</p> */}
-                <h2>Grapevine City</h2>
+                <p className="">Grapevine City</p>
               </Link>
               {/* </div> */}
               <div className="header-nav">

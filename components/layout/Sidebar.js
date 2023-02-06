@@ -31,7 +31,10 @@ const Sidebar = ({ openClass }) => {
           <div className="mobile-header-content-area">
             <div className="mobile-logo">
               <Link className="d-flex" href="/">
-                <img alt="IORI" src="assets/imgs/template/logo.svg" />
+                <img
+                  alt="IORI"
+                  src="assets/imgs/GvineImgs/Logos/svg/gcd-high-resolution-logo-color-on-transparent-background.png"
+                />
               </Link>
             </div>
             <div className="perfect-scroll">
@@ -54,7 +57,7 @@ const Sidebar = ({ openClass }) => {
                             }
                             onClick={() => handleToggle(1)}
                           >
-                            <span class="menu-expand">
+                            {/* <span class="menu-expand">
                               <svg
                                 class="w-6 h-6 icon-16"
                                 fill="none"
@@ -69,11 +72,11 @@ const Sidebar = ({ openClass }) => {
                                   d="M19 9l-7 7-7-7"
                                 ></path>
                               </svg>
-                            </span>
+                            </span> */}
                             <Link className="active" href="/">
                               Home
                             </Link>
-                            <ul
+                            {/* <ul
                               className={
                                 isActive.key == 1
                                   ? "sub-menu d-block"
@@ -83,7 +86,7 @@ const Sidebar = ({ openClass }) => {
                               <li>
                                 <Link href="/">Homepage</Link>
                               </li>
-                            </ul>
+                            </ul> */}
                           </li>
                           <li
                             className={
@@ -222,7 +225,7 @@ const Sidebar = ({ openClass }) => {
                               </li>
                             </ul>
                           </li>
-                          <li
+                          {/* <li
                             className={
                               isActive.key == 5
                                 ? "has-children active"
@@ -270,7 +273,7 @@ const Sidebar = ({ openClass }) => {
                                 </Link>
                               </li>
                             </ul>
-                          </li>
+                          </li> */}
                           <li
                             className={
                               isActive.key == 6
@@ -312,9 +315,9 @@ const Sidebar = ({ openClass }) => {
                               <li>
                                 <Link href="/coming-soon">Coming soon</Link>
                               </li>
-                              <li>
+                              {/* <li>
                                 <Link href="/404">Error 404</Link>
-                              </li>
+                              </li> */}
                             </ul>
                           </li>
                           <li>
@@ -353,7 +356,7 @@ const Sidebar = ({ openClass }) => {
                       </ul>
                     </nav>
                   </Tab>
-                  <Tab eventKey="notification" title="Notification">
+                  {/* <Tab eventKey="notification" title="Notification">
                     <p className="font-sm-bold color-brand-1 mt-30">Today</p>
                     <div className="notifications-item">
                       <div className="item-notify">
@@ -462,12 +465,12 @@ const Sidebar = ({ openClass }) => {
                         </div>
                       </div>
                     </div>
-                  </Tab>
+                  </Tab> */}
                 </Tabs>
               </div>
               <div className="site-copyright color-grey-400 mt-0">
                 <div className="box-download-app">
-                  <p className="font-xs color-grey-400 mb-25">
+                  {/* <p className="font-xs color-grey-400 mb-25">
                     Download our Apps and get extra 15% Discount on your first
                     Order…!
                   </p>
@@ -481,7 +484,7 @@ const Sidebar = ({ openClass }) => {
                         alt="iori"
                       />
                     </Link>
-                  </div>
+                  </div> */}
                   <p className="font-sm color-grey-400 mt-20 mb-10">
                     Secured Payment Gateways
                   </p>
@@ -491,11 +494,12 @@ const Sidebar = ({ openClass }) => {
                   />
                 </div>
                 <div className="mb-0">
-                  Copyright 2022 © IORI - Marketplace Template.
+                  Copyright {new Date().getFullYear()} © Grapevine City
+                  Directory - Marketplace Template.
                   <br />
                   Designed by
-                  <Link href="/http:/alithemes.com" target="_blank">
-                    &nbsp; AliThemes
+                  <Link href="/https://whyareyoubuyingthis.com" target="_blank">
+                    &nbsp; OneTripp LLC
                   </Link>
                 </div>
               </div>
