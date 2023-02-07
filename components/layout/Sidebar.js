@@ -498,7 +498,7 @@ const Sidebar = ({ openClass }) => {
                   Directory - Marketplace Template.
                   <br />
                   Designed by
-                  <Link href="/https://whyareyoubuyingthis.com" target="_blank">
+                  <Link href="https://whyareyoubuyingthis.com" target="_blank">
                     &nbsp; OneTripp LLC
                   </Link>
                 </div>

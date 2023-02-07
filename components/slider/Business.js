@@ -9,7 +9,7 @@ const Business = () => {
       title: "Lone Star Suites",
       color: "",
       color2: "bg1",
-      //   img: "member.png",
+      img: "../assets/imgs/GvineImgs/Logos/svg/gcd-website-favicon-color.png",
       description:
         "Lone Star Executive Suites - private offices, meeting rooms. Fully stocked break rooms and kitchen facilities, controlled entry, free visitor parking, are a few of the amenities offered. ",
       href: "https://www.lonestarexecutivesuites.com/",
@@ -18,7 +18,7 @@ const Business = () => {
       title: "Cross-Platform",
       color: "bg-2",
       color2: "bg-1",
-      img: "member1.png",
+      img: "../assets/imgs/GvineImgs/Logos/svg/gcd-website-favicon-color.png",
       description: "ajdlkfalsdjflkasjkdjfasf",
       href: "https://www.lonestarexecutivesuites.com/",
     },
@@ -26,7 +26,7 @@ const Business = () => {
       title: "Business strategy",
       color: "bg-5",
       color2: "bg-4",
-      img: "member2.png",
+      img: "../assets/imgs/GvineImgs/Logos/svg/gcd-website-favicon-color.png",
       description: "ajdlkfalsdjflkasjkdjfasf",
       href: "https://www.lonestarexecutivesuites.com/",
     },
@@ -34,23 +34,23 @@ const Business = () => {
       title: "Local Marketing",
       color: "bg-1",
       color2: "bg-3",
-      img: "member3.png",
+      img: "../assets/imgs/GvineImgs/Logos/svg/gcd-website-favicon-color.png",
       description: "ajdlkfalsdjflkasjkdjfasf",
       href: "https://www.lonestarexecutivesuites.com/",
     },
     {
-      title: "Social Media",
+      title: "Grapevine Chamber of Commerce",
       color: "bg-4",
       color2: "bg-2",
-      img: "member4.png",
-      description: "ajdlkfalsdjflkasjkdjfasf",
-      href: "https://www.lonestarexecutivesuites.com/",
+      img: "../assets/imgs/GvineImgs/Logos/svg/gcd-website-favicon-color.png",
+      description: "Chamber of Commerce for Grapevine City Texas!",
+      href: "https://www.grapevinechamber.org/",
     },
     {
       title: "Why Are You Buying this Affiliate Site",
       color: "bg-7",
       color2: "bg-5",
-      img: "member5.png",
+      img: "../assets/imgs/GvineImgs/Logos/svg/gcd-website-favicon-color.png",
       description: "A site that allows you to find cool products on Amazon!",
       href: "https://www.whyareyoubuyingthis.com/",
     },
@@ -59,14 +59,14 @@ const Business = () => {
   return (
     <>
       <Swiper
-        slidesPerView={6}
+        slidesPerView={4}
         spaceBetween={30}
         loop={true}
         speed={3000}
-        pauseOnMouseEnter={true}
         autoplay={{
           delay: 1,
-          disableOnInteraction: true,
+          disableOnInteraction: false,
+          // pauseOnMouseEnter: true,
         }}
         navigation={{
           prevEl: ".swiper-button-prev-group-4",
@@ -94,7 +94,7 @@ const Business = () => {
             spaceBetween: 30,
           },
           1350: {
-            slidesPerView: 6,
+            slidesPerView: 4,
             spaceBetween: 30,
           },
         }}
@@ -102,24 +102,27 @@ const Business = () => {
       >
         {data.map((item, i) => (
           <SwiperSlide class="swiper-slide">
-            <div className={`card-member-2 mb-30 ${item.color} hover-up`}>
-              <div className="card-image">
+            <a href={item.href}>
+              <div className={`card-member-3 mb-30 ${item.color} hover-up`}>
+                {/* <div className="card-image">
                 <img src={item.href} alt="iori" />
-              </div>
-              <div className={`card-info ${item.color2}`}>
-                <a className="font-lg-bold color-brand-1" href={item.href}>
-                  {item.title}
-                </a>
-                <div className="d-flex align-items-center">
-                  <p className="font-xs color-grey-200">{item.description}</p>
-                  <div className="list-socials mt-0">
+              </div> */}
+                <div className={`card-info ${item.color2}`}>
+                  <a className="font-lg-bold color-brand-1" href={item.href}>
+                    {item.title}
+                  </a>
+                  <div className="d-flex align-items-center">
+                    <p className="font-xs color-grey-200">{item.description}</p>
+                    <img src={item.img}></img>
+                    {/* <div className="list-socials mt-0">
                     <a className="icon-socials icon-facebook" href="#" />
                     <a className="icon-socials icon-twitter" href="#" />
                     <a className="icon-socials icon-instagram" href="#" />
+                  </div> */}
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>

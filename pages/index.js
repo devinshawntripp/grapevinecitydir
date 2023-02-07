@@ -966,7 +966,8 @@ const HomePage7 = () => {
                     <div className="shape-2 image-1">
                       {" "}
                       <img
-                        src="assets/imgs/template/newsletter_finger.png"
+                        className=""
+                        src="assets/imgs/GvineImgs/Logos/svg/gcd-website-favicon-color.png"
                         alt="iori"
                       />
                     </div>
