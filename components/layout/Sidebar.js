@@ -38,26 +38,28 @@ const Sidebar = ({ openClass }) => {
               </Link>
             </div>
             <div className="perfect-scroll">
-              <div className="mobile-menu-wrap mobile-header-border">
-                <Tabs
+              <div className="mobile-menu-wrap mobile-header-border w-50">
+                <div className="mt-25">
+                  {/* <Tabs
                   defaultActiveKey="menu"
                   id="fill-tab-example"
                   className="nav nav-tabs nav-tabs-mobile mt-25"
                   fill
-                >
-                  <Tab eventKey="menu" title="Menu">
-                    <div className="tab-pane">
-                      <nav className="mt-15">
-                        <ul className="mobile-menu font-heading">
-                          <li
-                            className={
-                              isActive.key == 1
-                                ? "has-children active"
-                                : "has-children"
-                            }
-                            onClick={() => handleToggle(1)}
-                          >
-                            {/* <span class="menu-expand">
+                > */}
+                  {/* <Tab eventKey="menu" title="Menu"> */}
+                  {/* <Tab eventKey="menu" title="Menu"> */}
+                  {/* <div className="tab-pane"> */}
+                  <nav className="mt-15">
+                    <ul className="mobile-menu font-heading">
+                      <li
+                        className={
+                          isActive.key == 1
+                            ? "has-children active"
+                            : "has-children"
+                        }
+                        onClick={() => handleToggle(1)}
+                      >
+                        {/* <span class="menu-expand">
                               <svg
                                 class="w-6 h-6 icon-16"
                                 fill="none"
@@ -73,10 +75,10 @@ const Sidebar = ({ openClass }) => {
                                 ></path>
                               </svg>
                             </span> */}
-                            <Link className="active" href="/">
-                              Home
-                            </Link>
-                            {/* <ul
+                        <Link className="active" href="/">
+                          Home
+                        </Link>
+                        {/* <ul
                               className={
                                 isActive.key == 1
                                   ? "sub-menu d-block"
@@ -87,145 +89,145 @@ const Sidebar = ({ openClass }) => {
                                 <Link href="/">Homepage</Link>
                               </li>
                             </ul> */}
-                          </li>
-                          <li
-                            className={
-                              isActive.key == 2
-                                ? "has-children active"
-                                : "has-children"
-                            }
-                            onClick={() => handleToggle(2)}
+                      </li>
+                      <li
+                        className={
+                          isActive.key == 2
+                            ? "has-children active"
+                            : "has-children"
+                        }
+                        onClick={() => handleToggle(2)}
+                      >
+                        <span class="menu-expand ml-100">
+                          <svg
+                            class="w-6 h-6 icon-16"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            <span class="menu-expand">
-                              <svg
-                                class="w-6 h-6 icon-16"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M19 9l-7 7-7-7"
-                                ></path>
-                              </svg>
-                            </span>
-                            <Link href="#">Company</Link>
-                            <ul
-                              className={
-                                isActive.key == 2
-                                  ? "sub-menu d-block"
-                                  : "sub-menu d-none"
-                              }
-                            >
-                              <li>
-                                <Link href="/about">About Us</Link>
-                              </li>
-                              <li>
-                                <Link href="/service">Our Services</Link>
-                              </li>
-                              <li>
-                                <Link href="/pricing">Pricing Plan</Link>
-                              </li>
-                              <li>
-                                <Link href="/team">Meet Our Team</Link>
-                              </li>
-                              <li>
-                                <Link href="/help">Help Center</Link>
-                              </li>
-                              <li>
-                                <Link href="/term-conditions">
-                                  Term and Conditions
-                                </Link>
-                              </li>
-                            </ul>
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 9l-7 7-7-7"
+                            ></path>
+                          </svg>
+                        </span>
+                        <Link href="#">Company</Link>
+                        <ul
+                          className={
+                            isActive.key == 2
+                              ? "sub-menu d-block"
+                              : "sub-menu d-none"
+                          }
+                        >
+                          <li>
+                            <Link href="/about">About Us</Link>
                           </li>
-                          <li
-                            className={
-                              isActive.key == 3
-                                ? "has-children active"
-                                : "has-children"
-                            }
-                            onClick={() => handleToggle(3)}
+                          <li>
+                            <Link href="/service">Our Services</Link>
+                          </li>
+                          <li>
+                            <Link href="/pricing">Pricing Plan</Link>
+                          </li>
+                          <li>
+                            <Link href="/team">Meet Our Team</Link>
+                          </li>
+                          <li>
+                            <Link href="/help">Help Center</Link>
+                          </li>
+                          <li>
+                            <Link href="/term-conditions">
+                              Term and Conditions
+                            </Link>
+                          </li>
+                        </ul>
+                      </li>
+                      <li
+                        className={
+                          isActive.key == 3
+                            ? "has-children active"
+                            : "has-children"
+                        }
+                        onClick={() => handleToggle(3)}
+                      >
+                        <span class="menu-expand">
+                          <svg
+                            class="w-6 h-6 icon-16"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            <span class="menu-expand">
-                              <svg
-                                class="w-6 h-6 icon-16"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M19 9l-7 7-7-7"
-                                ></path>
-                              </svg>
-                            </span>
-                            <Link href="#">Career</Link>
-                            <ul
-                              className={
-                                isActive.key == 3
-                                  ? "sub-menu d-block"
-                                  : "sub-menu d-none"
-                              }
-                            >
-                              <li>
-                                <Link href="/career">Jobs Listing</Link>
-                              </li>
-                              <li>
-                                <Link href="/job-detail">Job Details</Link>
-                              </li>
-                            </ul>
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 9l-7 7-7-7"
+                            ></path>
+                          </svg>
+                        </span>
+                        <Link href="#">Career</Link>
+                        <ul
+                          className={
+                            isActive.key == 3
+                              ? "sub-menu d-block"
+                              : "sub-menu d-none"
+                          }
+                        >
+                          <li>
+                            <Link href="/career">Jobs Listing</Link>
                           </li>
-                          <li
-                            className={
-                              isActive.key == 4
-                                ? "has-children active"
-                                : "has-children"
-                            }
-                            onClick={() => handleToggle(4)}
+                          <li>
+                            <Link href="/job-detail">Job Details</Link>
+                          </li>
+                        </ul>
+                      </li>
+                      <li
+                        className={
+                          isActive.key == 4
+                            ? "has-children active"
+                            : "has-children"
+                        }
+                        onClick={() => handleToggle(4)}
+                      >
+                        <span class="menu-expand">
+                          <svg
+                            class="w-6 h-6 icon-16"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            <span class="menu-expand">
-                              <svg
-                                class="w-6 h-6 icon-16"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M19 9l-7 7-7-7"
-                                ></path>
-                              </svg>
-                            </span>
-                            <Link href="/blog">Blog</Link>
-                            <ul
-                              className={
-                                isActive.key == 4
-                                  ? "sub-menu d-block"
-                                  : "sub-menu d-none"
-                              }
-                            >
-                              <li>
-                                <Link href="/blog">Blog Listing 1</Link>
-                              </li>
-                              <li>
-                                <Link href="/blog-2">Blog Listing 2</Link>
-                              </li>
-                              <li>
-                                <Link href="/blog-detail">Blog Details</Link>
-                              </li>
-                            </ul>
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 9l-7 7-7-7"
+                            ></path>
+                          </svg>
+                        </span>
+                        <Link href="/blog">Blog</Link>
+                        <ul
+                          className={
+                            isActive.key == 4
+                              ? "sub-menu d-block"
+                              : "sub-menu d-none"
+                          }
+                        >
+                          <li>
+                            <Link href="/blog">Blog Listing 1</Link>
                           </li>
-                          {/* <li
+                          <li>
+                            <Link href="/blog-2">Blog Listing 2</Link>
+                          </li>
+                          <li>
+                            <Link href="/blog-detail">Blog Details</Link>
+                          </li>
+                        </ul>
+                      </li>
+                      {/* <li
                             className={
                               isActive.key == 5
                                 ? "has-children active"
@@ -274,7 +276,7 @@ const Sidebar = ({ openClass }) => {
                               </li>
                             </ul>
                           </li> */}
-                          <li
+                      {/* <li
                             className={
                               isActive.key == 6
                                 ? "has-children active"
@@ -315,19 +317,19 @@ const Sidebar = ({ openClass }) => {
                               <li>
                                 <Link href="/coming-soon">Coming soon</Link>
                               </li>
-                              {/* <li>
+                              <li>
                                 <Link href="/404">Error 404</Link>
-                              </li> */}
+                              </li>
                             </ul>
-                          </li>
-                          <li>
-                            <Link href="/contact">Contact</Link>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </Tab>
-                  <Tab eventKey="account" title="Account">
+                          </li> */}
+                      <li>
+                        <Link href="/contact">Contact</Link>
+                      </li>
+                    </ul>
+                  </nav>
+                  {/* </div> */}
+                  {/* </Tab> */}
+                  {/* <Tab eventKey="account" title="Account">
                     <nav className="mt-15">
                       <ul className="mobile-menu font-heading">
                         <li>
@@ -355,7 +357,7 @@ const Sidebar = ({ openClass }) => {
                         </li>
                       </ul>
                     </nav>
-                  </Tab>
+                  </Tab> */}
                   {/* <Tab eventKey="notification" title="Notification">
                     <p className="font-sm-bold color-brand-1 mt-30">Today</p>
                     <div className="notifications-item">
@@ -466,7 +468,8 @@ const Sidebar = ({ openClass }) => {
                       </div>
                     </div>
                   </Tab> */}
-                </Tabs>
+                  {/* </Tabs> */}
+                </div>
               </div>
               <div className="site-copyright color-grey-400 mt-0">
                 <div className="box-download-app">

@@ -111,7 +111,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                         </li>
                       </ul>
                     </li>
-                    <li className="has-children">
+                    {/* <li className="has-children">
                       <Link href="#">Shop</Link>
                       <ul className="sub-menu">
                         <li>
@@ -124,8 +124,8 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                           <Link href="/product-detail">Product Details</Link>
                         </li>
                       </ul>
-                    </li>
-                    <li className="has-children">
+                    </li> */}
+                    {/* <li className="has-children">
                       <Link href="#">Pages</Link>
                       <ul className="sub-menu">
                         <li>
@@ -141,7 +141,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                           <Link href="/404">Error 404</Link>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/contact">Contact</Link>
                     </li>

@@ -16,13 +16,11 @@ const HomePage7 = () => {
           <div className="container text-center">
             <div className="row mt-150">
               <div className="col-xl-8 col-lg-10 m-auto">
-                <span className="font-md color-grey-400">
-                  Think. Creative. Solve
-                </span>
+                <span className="font-md color-white">All. About. Gvine</span>
                 <h1 className="color-brand-1 mb-25 mt-10">
-                  Innovative Solution to Move Your Business Forward
+                  Grapevine City Business Directory and Blog
                 </h1>
-                <p className="font-md color-grey-500 mb-25">
+                <p className="font-md color-white mb-25">
                   Collaborate, plan projects and manage resources with powerful
                   features that your whole team
                   <br className="d-none d-lg-block" />
