@@ -1,9 +1,25 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/layout/Layout";
 import Business from "../components/slider/Business";
 
 const HomePage7 = () => {
+  const [quoteOfTheDay, setQuoteOfTheDay] = useState({
+    quote: "",
+    author: "",
+  });
+  useEffect(() => {
+    const getQuoteOfTheDay = async () => {
+      await fetch("https://quotes.rest/qod?language=en", {
+        headers: { accept: "application/json" },
+      })
+        .then((res) => res.json())
+        .then((jsonRes) => setQuoteOfTheDay(jsonRes.contents.quotes.at(0)));
+    };
+
+    getQuoteOfTheDay();
+  }, []);
+
   return (
     <>
       <Layout>
@@ -52,7 +68,10 @@ const HomePage7 = () => {
         </section>
         <div className="section home12-logos">
           <div className="container">
-            <ul className="lists-logo">
+            <h3>
+              &quot;{quoteOfTheDay.quote}&quot; &#45;{quoteOfTheDay.author}
+            </h3>
+            {/* <ul className="lists-logo">
               <li>
                 <img src="assets/imgs/page/homepage12/placed.png" alt="iori" />
               </li>
@@ -80,10 +99,10 @@ const HomePage7 = () => {
                   alt="iori"
                 />
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
-        <section className="section mt-110">
+        {/* <section className="section mt-110">
           <div className="container">
             <div className="row align-items-end">
               <div className="col-lg-6 mb-20">
@@ -183,7 +202,7 @@ const HomePage7 = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <div className="container mt-80">
           <div className="row">
             <div className="col-xl-12 mb-30">
@@ -198,7 +217,7 @@ const HomePage7 = () => {
                           alt="iori"
                         />
                         <h4 className="color-brand-1 lbl-on-top">
-                          IORI Business Platform
+                          Our Business platform
                         </h4>
                       </div>
                     </div>
@@ -206,20 +225,17 @@ const HomePage7 = () => {
                   <div className="col-lg-6">
                     <div className="box-cover-pd-2">
                       <h2 className="color-brand-1 mb-30">
-                        How to grow your
+                        Grow your business
                         <br className="d-none d-lg-block" />
-                        business fast
+                        with us!
                       </h2>
                       <div className="item-number hover-up">
                         <div className="num-ele">1</div>
                         <div className="info-num">
-                          <h5 className="color-brand-1 mb-15">
-                            Create an account
-                          </h5>
+                          <h5 className="color-brand-1 mb-15">Email us</h5>
                           <p className="font-md color-grey-500">
-                            What makes us different from others? We give
-                            holistic solutions with strategy, design &amp;
-                            technology.
+                            Email us asking to either take your business down or
+                            be added to our directory.
                           </p>
                         </div>
                       </div>
@@ -227,12 +243,12 @@ const HomePage7 = () => {
                         <div className="num-ele">2</div>
                         <div className="info-num">
                           <h5 className="color-brand-1 mb-15">
-                            Build your founding team
+                            Your business gets added.
                           </h5>
                           <p className="font-md color-grey-500">
-                            What makes us different from others? We give
-                            holistic solutions with strategy, design &amp;
-                            technology.
+                            Your business will be added to our directory and be
+                            searchable on our website. We may also visit and add
+                            something to our blog!
                           </p>
                         </div>
                       </div>
@@ -240,12 +256,15 @@ const HomePage7 = () => {
                         <div className="num-ele">3</div>
                         <div className="info-num">
                           <h5 className="color-brand-1 mb-15">
-                            Launch and Scale
+                            Enjoy the Free Customers
                           </h5>
                           <p className="font-md color-grey-500">
-                            What makes us different from others? We give
-                            holistic solutions with strategy, design &amp;
-                            technology.
+                            What makes us different from others? We add your
+                            business for free! If you would like consistent
+                            content written for you or you would like to have
+                            your business be at the top of the list then email
+                            us. These are the only things that we will ask
+                            payment for!
                           </p>
                         </div>
                       </div>
@@ -256,7 +275,7 @@ const HomePage7 = () => {
             </div>
           </div>
         </div>
-        <section className="section mt-80">
+        {/* <section className="section mt-80">
           <div className="container">
             <div className="box-create-account bg-4">
               <div className="row align-items-center">
@@ -328,8 +347,8 @@ const HomePage7 = () => {
               </div>
             </div>
           </div>
-        </section>
-        <section className="section pt-0 pb-50 bg-core-value bg-7 mb-40 mt-100">
+        </section> */}
+        {/* <section className="section pt-0 pb-50 bg-core-value bg-7 mb-40 mt-100">
           <div className="container">
             <div className="row box-list-core-value">
               <div className="col-lg-4 mb-70">
@@ -436,7 +455,7 @@ const HomePage7 = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="section mt-50 pt-50 pb-40">
           <div className="container">
             <div className="box-cover-border">
@@ -452,13 +471,11 @@ const HomePage7 = () => {
                   <div className="box-info-video">
                     <span className="btn btn-tag">Get in touch</span>
                     <h2 className="color-brand-1 mt-15 mb-20">
-                      Want to talk to a marketing expert?
+                      Want to talk with our team about adding your business?
                     </h2>
                     <p className="font-md color-grey-500">
-                      Excepteur sint occaecat cupidatat non proident, sunt in
-                      culpa qui officia deserunt mollit laborum — semper quis
-                      lectus nulla. Interactively transform magnetic growth
-                      strategies whereas prospective "outside the box" thinking.
+                      Adding your business to the directory is free just send us
+                      a message.
                     </p>
                     <div className="box-button text-start mt-65">
                       {" "}
@@ -495,7 +512,7 @@ const HomePage7 = () => {
         <section className="section mt-50">
           <div className="container">
             <div className="row">
-              <div className="col-lg-4">
+              <div className="col-lg-6">
                 <div className="card-support">
                   <div className="card-image">
                     <div className="box-circle-img">
@@ -518,8 +535,8 @@ const HomePage7 = () => {
                   <div className="card-info">
                     <h4 className="color-brand-1 mb-15">Daily Updates</h4>
                     <p className="font-md color-grey-500 mb-15">
-                      Share updates instantly within our project management
-                      software, and get the entire team collaborating
+                      Check our website daily for blog posts and news about
+                      Grapevine City Texas. Also support local business!
                     </p>
                     <Link
                       className="btn btn-default pl-0 font-sm-bold hover-up"
@@ -544,7 +561,7 @@ const HomePage7 = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4">
+              {/* <div className="col-lg-4">
                 <div className="card-support">
                   <div className="card-image">
                     <div className="box-circle-img">
@@ -592,8 +609,8 @@ const HomePage7 = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-4">
+              </div> */}
+              <div className="col-lg-6">
                 <div className="card-support">
                   <div className="card-image">
                     <div className="box-circle-img">
@@ -616,8 +633,8 @@ const HomePage7 = () => {
                   <div className="card-info">
                     <h4 className="color-brand-1 mb-15">Weekly Reports</h4>
                     <p className="font-md color-grey-500 mb-15">
-                      Share updates instantly within our project management
-                      software, and get the entire team collaborating
+                      Subsribe to our newsletter! We will send you fun things to
+                      do, and what's generally going on in Grapevine.
                     </p>
                     <Link
                       className="btn btn-default pl-0 font-sm-bold hover-up"
@@ -651,10 +668,9 @@ const HomePage7 = () => {
               <div className="col-lg-8 col-md-8">
                 <h2 className="color-brand-1 mb-20">From our blog </h2>
                 <p className="font-lg color-gray-500">
-                  Aenean velit nisl, aliquam eget diam eu, rhoncus tristique
-                  dolor.
+                  See the Latest from our blog!
                   <br className="d-none d-lg-block" />
-                  Aenean vulputate sodales urna ut vestibulum
+                  Leave your comment!
                 </p>
               </div>
               <div className="col-lg-4 col-md-4 text-md-end text-start">

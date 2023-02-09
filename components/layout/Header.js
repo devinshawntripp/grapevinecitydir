@@ -86,17 +86,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                         </li>
                       </ul>
                     </li>
-                    <li className="has-children">
-                      <Link href="#">Career</Link>
-                      <ul className="sub-menu">
-                        <li>
-                          <Link href="/career">Jobs Listing</Link>
-                        </li>
-                        <li>
-                          <Link href="/job-detail">Job Details</Link>
-                        </li>
-                      </ul>
-                    </li>
+
                     <li className="has-children">
                       <Link href="#">Blog</Link>
                       <ul className="sub-menu">
@@ -110,6 +100,17 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                           <Link href="/blog-detail">Blog Details</Link>
                         </li>
                       </ul>
+                    </li>
+                    <li className="">
+                      <Link href="/career">Jobs Listings</Link>
+                      {/* <ul className="sub-menu">
+                        <li>
+                          <Link href="/career">Jobs Listing</Link>
+                        </li>
+                        <li>
+                          <Link href="/job-detail">Job Details</Link>
+                        </li>
+                      </ul> */}
                     </li>
                     {/* <li className="has-children">
                       <Link href="#">Shop</Link>

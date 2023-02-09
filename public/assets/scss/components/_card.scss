@@ -3,9 +3,16 @@
   .card-image {
     position: relative;
     margin-bottom: 18px;
+    overflow: hidden;
+    height: 200px;
     img {
       border-radius: 4px;
       width: 100%;
+      //   object-fit: none;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
   .card-info {

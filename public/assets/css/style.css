@@ -1693,10 +1693,15 @@ body {
 .card-blog-grid .card-image {
   position: relative;
   margin-bottom: 18px;
+  overflow: hidden;
+  height: 200px;
 }
 .card-blog-grid .card-image img {
   border-radius: 4px;
   width: 100%;
+}
+.card-blog-grid .card-image img:hover {
+  transform: scale(1.2);
 }
 .card-blog-grid .card-info a {
   text-decoration: none;
